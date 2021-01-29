@@ -1,0 +1,117 @@
+@mixin desktop() {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin wrapper() {
+  @include desktop {
+    max-width: 1170px;
+    margin: 0 auto;
+    outline: 2px solid hotpink;
+  }
+
+  @include tablet {
+    // padding-left: 3.9%;
+    // padding-right: 3.9%;
+  }
+
+  @include mobile {
+    width: auto;
+    // padding-left: 6.25%;
+    // padding-right: 6.25%;
+  }
+}
+
+@mixin list-reset() {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin h1-model() {
+  @include desktop {
+    margin: 0;
+    font-size: 55px;
+    line-height: 80px;
+    font-family: $font;
+    font-weight: 600;
+    // color: $bg-white-color;
+  }
+
+  @include tablet {
+    font-size: 30px;
+    line-height: 45px;
+    // color: $title-color;
+  }
+
+  @include mobile {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+// @mixin h2-model() {
+//   margin: 0;
+//   font-size: 36px;
+//   line-height: 60px;
+//   font-family: $font-title;
+//   font-weight: 400;
+//   color: $title-color;
+
+//   @include tablet {
+//     font-size: 60px;
+//   }
+// }
+
+// @mixin h3-model() {
+//   margin: 0;
+//   font-size: 24px;
+//   line-height: 37px;
+//   font-family: $font-title;
+//   font-weight: 400;
+//   color: $title-color;
+
+//   @include tablet {
+//     font-size: 36px;
+//   }
+// }
+
+@mixin p-model() {
+  @include desktop {
+    margin: 0;
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    color: $text-grey-color;
+    opacity: 0.7;
+  }
+
+  @include tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @include mobile {
+    color: $text-darkgrey-color;
+  }
+}
+
+@mixin text-options($size, $height, $weight, $color) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  color: $color;
+}

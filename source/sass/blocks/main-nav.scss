@@ -1,0 +1,53 @@
+.main-nav {
+  @include desktop {
+    @include wrapper;
+
+    display: flex;
+    align-items: center;
+    padding-top: 38px;
+    padding-bottom: 8px;
+  }
+}
+
+.main-nav__logo {
+  @include desktop {
+    width: 57px;
+    margin-right: 33.4%;
+  }
+}
+
+.main-nav__list {
+  @include desktop {
+    @include list-reset;
+
+    display: flex;
+    align-items: center;
+    min-width: 196px;
+    outline: 2px solid firebrick;
+  }
+}
+
+.main-nav__item {
+  outline: 2px solid red;
+  margin-left: 5%;
+
+  text-align: right;
+}
+
+.main-nav__link {
+  @include desktop {
+    @include text-options(14px, 17px, 500, $text-darkgrey-color);
+    text-decoration: none;
+  }
+}
+
+.main-nav__tel {
+  @include desktop {
+    width: 245px;
+    margin-left: 2.4%;
+    padding-left: 3.7%;
+
+    @include text-options(18px, 32px, 400, $text-darkgrey-color);
+    outline: 2px solid green;
+  }
+}

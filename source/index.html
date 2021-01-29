@@ -1,12 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Интернет-магазин туров по Европе</title>
+  <link rel="preload" href="fonts/montserrat400.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat500.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat600.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat700.woff2" as="font">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
+
 <body>
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+  <header class="page-header">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+
+      <a class="main-nav__logo">
+        <img class="main-nav__logo-image" src="img/logo.svg" width="57" height="22"
+          alt="Логотип магазина туров по Европе">
+      </a>
+      <button class="main-nav__toggle visually-hidden" type="button">Открыть
+        меню</button>
+
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="about.html">О путешествии</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="price.html">Цены</a>
+        </li>
+      </ul>
+
+      <a class="main-nav__tel" href="tel:+749978468446">+7 (499) -784-684-46</a>
+    </nav>
+  </header>
 
 </body>
+
 </html>
