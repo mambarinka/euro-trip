@@ -4,15 +4,139 @@
 
     display: flex;
     align-items: center;
-    padding-top: 38px;
-    padding-bottom: 8px;
+    padding-top: 36px;
+    padding-bottom: 30px;
+  }
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  @include mobile {
+    @include wrapper;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 17px;
   }
 }
 
 .main-nav__logo {
   @include desktop {
     width: 57px;
-    margin-right: 33.4%;
+    margin-right: 57px;
+  }
+
+  @include tablet {
+    position: relative;
+    top: 18px;
+    left: 21px;
+    width: 44px;
+  }
+
+  @include mobile {
+    width: 44px;
+  }
+}
+
+.main-nav__toggle {
+  @include desktop {
+    display: none;
+  }
+
+  @include tablet {
+    position: relative;
+    width: 72px;
+    height: 50px;
+
+    font-size: 0;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    // outline: 2px solid purple;
+
+    .main-nav--opened &::before {
+      position: absolute;
+
+      content: "";
+      width: 22px;
+      height: 22px;
+      top: 15px;
+      right: 25px;
+      // outline: 2px solid lightgreen;
+
+      background: url("../../img/icon-button-close.svg") no-repeat center;
+    }
+
+    .main-nav--closed & {
+      background-color: $main-color;
+    }
+
+    .main-nav--closed &::before {
+      position: absolute;
+
+      content: "";
+      width: 22px;
+      height: 22px;
+      top: 14px;
+      right: 25px;
+
+      background: url("../../img/icon-button-open.svg") no-repeat center;
+    }
+
+    .main-nav--nojs & {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    position: absolute;
+    width: 48px;
+    height: 49px;
+    top: 0;
+    right: 0;
+
+    font-size: 0;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: 2px solid purple;
+
+    .main-nav--opened &::before {
+      position: absolute;
+      content: "";
+      width: 22px;
+      height: 22px;
+      top: 15px;
+      right: 15px;
+      // outline: 2px solid lightgreen;
+
+      background: url("../../img/icon-button-close.svg") no-repeat center;
+    }
+
+    .main-nav--closed & {
+      background-color: $main-color;
+    }
+
+    .main-nav--closed &::before {
+      position: absolute;
+      content: "";
+      width: 22px;
+      height: 22px;
+      top: 14px;
+      right: 14px;
+
+      background: url("../../img/icon-button-open.svg") no-repeat center;
+    }
+  }
+
+  .main-nav--nojs & {
+    display: none;
   }
 }
 
@@ -21,33 +145,143 @@
     @include list-reset;
 
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-    min-width: 196px;
-    outline: 2px solid firebrick;
+    width: 67%;
+    // outline: 2px solid firebrick;
+  }
+
+  @include tablet {
+    @include list-reset;
+
+    width: 100%;
+    padding-top: 81px;
+    // outline: 2px solid firebrick;
+  }
+
+  @include mobile {
+    @include list-reset;
+
+    width: 100%;
+    padding-top: 95px;
   }
 }
 
 .main-nav__item {
-  outline: 2px solid red;
-  margin-left: 5%;
+  @include desktop {
+    // outline: 2px solid red;
+    margin-left: 5%;
 
-  text-align: right;
+    text-align: right;
+  }
+
+  @include tablet {
+    margin-bottom: 30px;
+
+    .main-nav--closed & {
+      display: none;
+    }
+
+    .main-nav--nojs & {
+      display: block;
+      margin-bottom: 30px;
+    }
+  }
+
+  @include mobile {
+    margin-bottom: 30px;
+
+    .main-nav--closed & {
+      display: none;
+    }
+
+    .main-nav--nojs & {
+      display: block;
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .main-nav__link {
   @include desktop {
     @include text-options(14px, 17px, 500, $text-darkgrey-color);
     text-decoration: none;
+
+    &[href]:hover,
+    &[href]:focus {
+      color: $main-color;
+    }
+  }
+
+  @include tablet {
+    @include text-options(20px, 28px, 600, $text-middlegrey-color);
+
+    display: flex;
+    width: 100%;
+    padding: 16px 15px;
+
+    background-color: $light-grey-color;
+
+    text-decoration: none;
+
+    &[href]:hover,
+    &[href]:focus {
+      color: $main-color;
+    }
+  }
+
+  @include mobile {
+    @include text-options(20px, 28px, 600, $text-middlegrey-color);
+
+    display: flex;
+    width: 100%;
+    padding: 16px 15px;
+
+    background-color: $light-grey-color;
+
+    text-decoration: none;
+
+    &[href]:hover,
+    &[href]:focus {
+      color: $main-color;
+    }
   }
 }
 
 .main-nav__tel {
   @include desktop {
-    width: 245px;
-    margin-left: 2.4%;
-    padding-left: 3.7%;
+    display: flex;
+    justify-content: space-around;
+    width: 257px;
+    margin-left: 45px;
+    padding-right: 8px;
 
     @include text-options(18px, 32px, 400, $text-darkgrey-color);
-    outline: 2px solid green;
+    // outline: 2px solid green;
+
+    &[href]:hover,
+    &[href]:focus {
+      color: $main-color;
+    }
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.main-nav__tel-icon {
+  @include desktop {
+    fill: none;
+    stroke: currentColor;
+
+    &:hover,
+    &:focus {
+      stroke: $main-color;
+    }
   }
 }

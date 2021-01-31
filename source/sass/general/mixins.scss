@@ -5,7 +5,7 @@
 }
 
 @mixin tablet() {
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1023px) {
     @content;
   }
 }
@@ -30,8 +30,8 @@
 
   @include mobile {
     width: auto;
-    // padding-left: 6.25%;
-    // padding-right: 6.25%;
+    padding-left: 4.69%;
+    padding-right: 4.69%;
   }
 }
 
