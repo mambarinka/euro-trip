@@ -7,6 +7,8 @@
   },
 
     "ignoreFiles": [
-    "source/sass/general/normalize.scss"
+    "source/sass/general/normalize.scss",
+    "source/js/picturefill.js",
+    "source/js/svg4everybody.js"
   ]
 }
