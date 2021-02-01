@@ -30,8 +30,8 @@
 
   @include mobile {
     width: auto;
-    padding-left: 4.69%;
-    padding-right: 4.69%;
+    padding-left: 8%;
+    padding-right: 8%;
   }
 }
 
@@ -42,13 +42,13 @@
 }
 
 @mixin h1-model() {
+  margin: 0;
+  color: $white-color;
+
   @include desktop {
-    margin: 0;
     font-size: 55px;
     line-height: 80px;
-    font-family: $font;
     font-weight: 600;
-    // color: $bg-white-color;
   }
 
   @include tablet {
@@ -90,8 +90,9 @@
 // }
 
 @mixin p-model() {
+  margin: 0;
+
   @include desktop {
-    margin: 0;
     font-size: 16px;
     line-height: 28px;
     font-weight: 400;
@@ -101,10 +102,12 @@
 
   @include tablet {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 28px;
   }
 
   @include mobile {
+    font-size: 16px;
+    line-height: 28px;
     color: $text-darkgrey-color;
   }
 }

@@ -21,6 +21,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     padding-top: 17px;
+    padding-bottom: 11px;
   }
 }
 
@@ -105,7 +106,6 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    outline: 2px solid purple;
 
     .main-nav--opened &::before {
       position: absolute;
@@ -155,7 +155,6 @@
     @include list-reset;
 
     width: 100%;
-    padding-top: 81px;
     // outline: 2px solid firebrick;
   }
 
@@ -163,7 +162,6 @@
     @include list-reset;
 
     width: 100%;
-    padding-top: 95px;
   }
 }
 
@@ -178,6 +176,10 @@
   @include tablet {
     margin-bottom: 30px;
 
+    &:first-child {
+      padding-top: 81px;
+    }
+
     .main-nav--closed & {
       display: none;
     }
@@ -190,6 +192,10 @@
 
   @include mobile {
     margin-bottom: 30px;
+
+    &:first-child {
+      padding-top: 95px;
+    }
 
     .main-nav--closed & {
       display: none;
