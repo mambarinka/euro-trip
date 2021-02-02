@@ -1,0 +1,279 @@
+.price {
+  @include wrapper;
+
+  display: flex;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 36px;
+  }
+}
+
+.price__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 24.9%;
+  padding-top: 120px;
+  order: 1;
+
+  @include tablet {
+    align-items: center;
+    width: auto;
+    margin-bottom: 28px;
+    padding-top: 0;
+    order: 0;
+
+    text-align: center;
+  }
+}
+
+.price__title {
+  @include h-model;
+
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 21px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 61%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: $main-color;
+  }
+
+  @include tablet {
+    margin-bottom: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.price__description {
+  @include p-model;
+
+  margin-bottom: 61px;
+
+  letter-spacing: 0;
+
+  @include desktop {
+    line-height: 27px;
+  }
+
+  @include tablet {
+    width: 91%;
+    margin-bottom: 30px;
+  }
+}
+
+.price__info {
+  @include text-options(22px, 34px, 500, $text-darkgrey-color);
+
+  margin-bottom: 13px;
+  padding-left: 48px;
+
+  @include tablet {
+    margin-bottom: 10px;
+    padding-left: 0;
+
+    font-size: 18px;
+    line-height: 34px;
+  }
+}
+
+.price__tel {
+  display: flex;
+  justify-content: space-between;
+  width: 257px;
+
+  @include text-options(20px, 32px, 400, $text-darkgrey-color);
+
+  text-decoration: none;
+
+  @include tablet {
+    width: auto;
+    font-size: 18px;
+    line-height: 32px;
+    color: $main-color;
+    text-decoration: underline;
+  }
+
+  @include mobile {
+    text-decoration: underline;
+  }
+}
+
+.price__tel-icon {
+  @include desktop {
+    fill: none;
+    stroke: $main-color;
+  }
+
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.price__tariff-list {
+  @include list-reset;
+
+  display: flex;
+  justify-content: space-between;
+  margin-right: auto;
+  width: 65.9%;
+
+  @include tablet {
+    width: 82%;
+    margin-right: 0;
+  }
+}
+
+.price__tariff-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 48.1%;
+  min-height: 672px;
+  padding: 40px 30px 28px 30px;
+
+  border: 1px solid rgba(44, 46, 63, 0.3);
+  border-radius: 6px;
+
+  &:hover {
+    border: 3px solid $main-color;
+    padding: 38px 28px 26px 28px;
+  }
+
+  @include tablet {
+    width: 46.1%;
+  }
+}
+
+.price__tariff-title {
+  @include text-options(28px, 34px, 600, $text-darkgrey-color);
+
+  margin: 0;
+  margin-bottom: 41px;
+
+  letter-spacing: -1.3px;
+  opacity: 0.7;
+
+  .price__tariff-item:hover & {
+    color: $main-color;
+    letter-spacing: 0;
+    opacity: 1;
+  }
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 38px;
+
+    .price__tariff-item:hover & {
+      font-size: 24px;
+      line-height: 34px;
+    }
+  }
+}
+
+.price__tariff-cost {
+  @include text-options(25px, 34px, 600, $text-darkgrey-color);
+  opacity: 0.7;
+
+  .price__tariff-item:hover & {
+    color: $main-color;
+    opacity: 1;
+  }
+
+  @include desktop {
+    position: absolute;
+    top: 41px;
+    right: 29px;
+
+    .price__tariff-item:hover & {
+      top: 39px;
+      right: 27px;
+    }
+  }
+}
+
+.price__tariff-info {
+  @include text-options(16px, 24px, 400, $text-darkgrey-color);
+
+  position: relative;
+  width: 92%;
+  margin: 0;
+  margin-bottom: 33px;
+  padding-bottom: 27px;
+
+  opacity: 0.7;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: $text-grey-color;
+    opacity: 0.3;
+  }
+
+  .price__tariff-item:hover & {
+    &::after {
+      background-color: $main-color;
+      opacity: 1;
+    }
+  }
+}
+
+.price__tariff-composition {
+  @include list-reset;
+  @include text-options(16px, 32px, 400, $text-darkgrey-color);
+}
+
+.price__tariff-point {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 29px;
+
+  &::before {
+    position: absolute;
+    content: url("../img/check-mark-orange.svg");
+    width: 14px;
+    height: 12px;
+    left: 3px;
+    top: 2px;
+
+    .price__tariff-item:hover & {
+      content: url("../img/check-mark-grey.svg");
+      width: 22px;
+      height: 22px;
+      left: -1px;
+      top: 6px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .price__tariff-item:last-child & {
+    margin-bottom: 15px;
+  }
+}
+
+.price__tariff-link {
+  width: 310px;
+  margin-top: auto;
+  padding-top: 29px;
+  padding-bottom: 29px;
+}
