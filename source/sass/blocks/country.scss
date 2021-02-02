@@ -1,0 +1,303 @@
+.country {
+  @include wrapper;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 13px;
+  padding-bottom: 234px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 147px;
+    right: -137px;
+    width: 1444px;
+    z-index: -1;
+    min-height: 1089px;
+    outline: 2px solid black;
+    background: url("../img/bg-europe-map.png") no-repeat;
+    background-size: 1444px 1089px;
+  }
+
+  @include tablet {
+    padding-bottom: 100px;
+    overflow: hidden;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    padding-left: 0;
+    padding-right: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.country__tab-list {
+  @include list-reset;
+
+  display: flex;
+  justify-content: space-between;
+  width: 77%;
+  margin-bottom: 80px;
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid rgba(44, 46, 63, 0.3);
+
+  @include tablet {
+    width: auto;
+
+    margin-left: 37px;
+    margin-bottom: 18px;
+  }
+
+  @include mobile {
+    width: auto;
+    margin-bottom: 9px;
+    margin-left: 5%;
+  }
+}
+
+.country__tab-item {
+  @include tablet {
+    margin-right: 13.7%;
+  }
+
+  @include mobile {
+    margin-right: 33%;
+  }
+}
+
+.country__tab-link {
+  @include text-options(20px, 24px, 500, rgba(44, 46, 63, 0.3));
+  text-decoration: none;
+  letter-spacing: -0.4px;
+
+  &--current {
+    color: $main-color;
+  }
+}
+
+.country__list {
+  @include list-reset;
+}
+
+.country__item {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+
+  &--hidden {
+    display: none;
+  }
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+  }
+}
+
+.country__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 32%;
+  margin-right: 8.2%;
+  padding-top: 16px;
+
+  @include tablet {
+    align-items: center;
+    width: 95%;
+    margin-right: 0;
+  }
+
+  @include mobile {
+    align-items: center;
+    width: 90%;
+    margin-right: 0;
+  }
+}
+
+.country__title {
+  @include h-model;
+  position: relative;
+  margin-bottom: 52px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 99px;
+    left: 0;
+    width: 85%;
+    height: 3px;
+
+    background-color: $main-color;
+  }
+
+  @include tablet {
+    margin-bottom: 20px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    margin-bottom: 19px;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.country__description {
+  @include p-model;
+  margin-bottom: 49px;
+  letter-spacing: -0.5px;
+
+  @include tablet {
+    margin-bottom: 19px;
+  }
+
+  @include mobile {
+    margin-bottom: 19px;
+  }
+}
+
+.country__buy-link {
+  width: 250px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @include tablet {
+    margin-bottom: 30px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+  }
+
+  @include mobile {
+    width: 288px;
+    margin-bottom: 50px;
+    padding-top: 19px;
+    padding-bottom: 19px;
+  }
+}
+
+.country__image {
+  width: 100%;
+}
+
+.country__review {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 382px;
+  padding: 30px;
+  height: 367px;
+  right: 0;
+  top: 116px;
+  background-color: $white-color;
+  outline: 1px solid firebrick;
+
+  @include tablet {
+    top: 429px;
+    left: calc(50% - 382px / 2);
+  }
+
+  @include mobile {
+    flex-direction: column;
+    width: 268px;
+    height: 431px;
+    padding-left: 21px;
+    padding-right: 21px;
+    top: 632px;
+    left: calc(50% - 268px / 2);
+  }
+}
+
+.country__review-title {
+  @include text-options(30px, 37px, 500, $text-grey-color);
+
+  position: relative;
+  margin: 0;
+  margin-bottom: 31px;
+  letter-spacing: -0.7px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 47px;
+    left: 0;
+    width: 57%;
+    height: 0.7px;
+
+    background-color: $main-color;
+  }
+
+  @include mobile {
+    @include text-options(20px, 24px, 500, $text-grey-color);
+    margin-bottom: 34px;
+
+    &::after {
+      width: 65px;
+
+      top: 37px;
+      left: calc(50% - 65px / 2);
+    }
+  }
+}
+
+.country__review-description {
+  @include text-options(14px, 28px, 400, $text-grey-color);
+
+  margin: 0;
+  margin-bottom: 32px;
+
+  opacity: 0.7;
+  letter-spacing: -0.4px;
+
+  @include tablet {
+    text-align: left;
+  }
+
+  @include mobile {
+    margin-bottom: 18px;
+  }
+}
+
+.country__review-image {
+  margin-right: 17px;
+
+  @include mobile {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+}
+
+.country__review-author {
+  @include text-options(16px, 20px, 500, $text-grey-color);
+
+  padding-top: 11px;
+
+  letter-spacing: -0.5px;
+
+  @include mobile {
+    padding-top: 0;
+  }
+}
