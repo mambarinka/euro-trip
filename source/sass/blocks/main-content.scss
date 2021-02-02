@@ -20,7 +20,6 @@
   }
 
   @include mobile {
-    margin-bottom: 300px;
     padding-top: 83px;
     background-image: url("../img/bg-mobile@1x.jpg");
 
@@ -39,7 +38,7 @@
   display: flex;
   flex-direction: column;
   padding-top: 187px;
-  padding-left: 36.5%;
+  padding-left: 700px;
   padding-bottom: 298px;
 
   @include tablet {
@@ -60,7 +59,8 @@
 }
 
 .main-content__title {
-  @include h1-model;
+  @include h-model;
+  color: $white-color;
 
   @include desktop {
     width: 412px;
