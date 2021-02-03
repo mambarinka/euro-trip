@@ -15,7 +15,6 @@
     width: 1444px;
     z-index: -1;
     min-height: 1089px;
-    outline: 2px solid black;
     background: url("../img/bg-europe-map.png") no-repeat;
     background-size: 1444px 1089px;
   }
@@ -214,7 +213,6 @@
   right: 0;
   top: 116px;
   background-color: $white-color;
-  outline: 1px solid firebrick;
 
   @include tablet {
     top: 429px;

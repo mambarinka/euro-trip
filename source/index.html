@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
   <title>Интернет-магазин туров по Европе</title>
   <link rel="preload" href="fonts/montserrat400.woff2" as="font" crossorigin>
   <link rel="preload" href="fonts/montserrat500.woff2" as="font" crossorigin>
@@ -28,10 +29,10 @@
 
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link" href="about.html">О путешествии</a>
+          <a class="main-nav__link" href="#places">О путешествии</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="price.html">Цены</a>
+          <a class="main-nav__link" href="#prices">Цены</a>
         </li>
       </ul>
 
@@ -56,7 +57,7 @@
     </section>
 
     <section class="places">
-      <h2 class="places__title">Места посещения</h2>
+      <h2 class="places__title" id="places">Места посещения</h2>
       <p class="places__description">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
 
       <ul class="places__list">
@@ -86,8 +87,8 @@
               srcset="img/albania-mobile@1x.webp 1x, img/albania-mobile@2x.webp 2x">
             <source media="(min-width: 1024px)" srcset="img/albania-desktop@1x.png 1x, img/albania-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/albania-tablet@1x.png 1x, img/albania-tablet@2x.png 2x">
-            <img class="places__img" src="img/albania-mobile@1x.png" srcset="img/albania-mobile@2x.png 2x""
-              width=" 350" height="430" alt="Фото Албании">
+            <img class="places__img" src="img/albania-mobile@1x.png" srcset="img/albania-mobile@2x.png 2x"
+              width="350" height="430" alt="Фото Албании">
           </picture>
           <span class="places__country">Албания</span>
           <a href="#albania" class="places__link  button">Смотреть подробнее</a>
@@ -137,8 +138,8 @@
               srcset="img/croatia-mobile@1x.webp 1x, img/croatia-mobile@2x.webp 2x">
             <source media="(min-width: 1024px)" srcset="img/croatia-desktop@1x.png 1x, img/croatia-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/croatia-tablet@1x.png 1x, img/croatia-tablet@2x.png 2x">
-            <img class="places__img" src="img/croatia-mobile@1x.png" srcset="img/croatia-mobile@2x.png 2x""
-              width=" 350" height="430" alt="Фото Хорватии">
+            <img class="places__img" src="img/croatia-mobile@1x.png" srcset="img/croatia-mobile@2x.png 2x"
+              width="350" height="430" alt="Фото Хорватии">
           </picture>
           <span class="places__country">Хорватия</span>
           <a href="#croatia" class="places__link  button">Смотреть подробнее</a>
@@ -190,8 +191,8 @@
             <source media="(min-width: 768px)"
               srcset="img/greece-country-tablet@1x.png 1x, img/greece-country-tablet@2x.png 2x">
             <img class="country__image" src="img/greece-country-mobile@1x.png"
-              srcset="img/greece-country-mobile@2x.png 2x""
-              width=" 430" height="596" alt="Фото Греции">
+              srcset="img/greece-country-mobile@2x.png 2x"
+              width="430" height="596" alt="Фото Греции">
           </picture>
           <article class="country__review">
             <h4 class="country__review-title">Отзывы</h4>
@@ -228,8 +229,8 @@
             <source media="(min-width: 768px)"
               srcset="img/albania-country-tablet@1x.png 1x, img/albania-country-tablet@2x.png 2x">
             <img class="country__image" src="img/albania-country-mobile@1x.png"
-              srcset="img/albania-country-mobile@2x.png 2x""
-              width=" 430" height="596" alt="Фото Албании">
+              srcset="img/albania-country-mobile@2x.png 2x"
+              width="430" height="596" alt="Фото Албании">
           </picture>
           <article class="country__review">
             <h4 class="country__review-title">Отзывы</h4>
@@ -264,8 +265,8 @@
             <source media="(min-width: 768px)"
               srcset="img/macedonia-country-tablet@1x.png 1x, img/macedonia-country-tablet@2x.png 2x">
             <img class="country__image" src="img/macedonia-country-mobile@1x.png"
-              srcset="img/macedonia-country-mobile@2x.png 2x""
-              width=" 430" height="596" alt="Фото Македонии">
+              srcset="img/macedonia-country-mobile@2x.png 2x"
+              width="430" height="596" alt="Фото Македонии">
           </picture>
           <article class="country__review">
             <h4 class="country__review-title">Отзывы</h4>
@@ -301,8 +302,8 @@
             <source media="(min-width: 768px)"
               srcset="img/montenegro-country-tablet@1x.png 1x, img/montenegro-country-tablet@2x.png 2x">
             <img class="country__image" src="img/montenegro-country-mobile@1x.png"
-              srcset="img/montenegro-country-mobile@2x.png 2x""
-              width=" 430" height="596" alt="Фото Черногории">
+              srcset="img/montenegro-country-mobile@2x.png 2x"
+              width="430" height="596" alt="Фото Черногории">
           </picture>
           <article class="country__review">
             <h4 class="country__review-title">Отзывы</h4>
@@ -337,8 +338,8 @@
             <source media="(min-width: 768px)"
               srcset="img/croatia-country-tablet@1x.png 1x, img/croatia-country-tablet@2x.png 2x">
             <img class="country__image" src="img/croatia-country-mobile@1x.png"
-              srcset="img/croatia-country-mobile@2x.png 2x""
-              width=" 430" height="596" alt="Фото Хорватии">
+              srcset="img/croatia-country-mobile@2x.png 2x"
+              width="430" height="596" alt="Фото Хорватии">
           </picture>
           <article class="country__review">
             <h4 class="country__review-title">Отзывы</h4>
@@ -356,7 +357,7 @@
       </ul>
     </section>
 
-    <section class="price">
+    <section class="price" id="prices">
       <div class="price__wrapper">
         <h2 class="price__title">Цены</h2>
         <p class="price__description">Специально для Вас мы разработали 2 пакета цен с разными условиями, отталкиваясь
@@ -399,9 +400,107 @@
       </ul>
     </section>
 
-    <script src="js/script.js"></script>
-    <script src="js/picturefill.js"></script>
-    <script src="js/svg4everybody.js"></script>
+    <section class="feedback">
+      <div class="feedback__wrapper">
+        <h2 class="feedback__title">У Вас остались вопросы?</h2>
+        <p class="feedback__description">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
+        <form action="https://echo.htmlacademy.ru" method="GET" class="feedback__form">
+          <ul class="feedback__form-list">
+            <li class="feedback__form-item">
+              <label class="feedback__form-item-title feedback__form-item-title--tel" for="tel">+7</label>
+              <input class="feedback__form-item-input feedback__form-item-input--tel" type="tel" name="tel" id="tel"
+                pattern="\d{10}" placeholder="Введите 10 цифр номера" required="">
+            <li class="feedback__form-item">
+              <label class="feedback__form-item-title feedback__form-item-title--mail" for="email">E-mail</label>
+              <input class="feedback__form-item-input" type="email" name="email" id="email">
+            </li>
+          </ul>
+          <button class="feedback__form-submit button" type="submit">Отправить</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__travels next-travels">
+      <h4 class="next-travels__title">Следующие путешествия</h4>
+      <ul class="next-travels__list">
+        <li class="next-travels__item">
+          <a class="next-travels__link" href="#">Марсель</a>
+        </li>
+        <li class="next-travels__item">
+          <a class="next-travels__link" href="#">Сардиния</a>
+        </li>
+        <li class="next-travels__item">
+          <a class="next-travels__link" href="#">Корс</a>
+        <li>
+        <li class="next-travels__item">
+          <a class="next-travels__link" href="#">Ним</a>
+        <li>
+        <li class="next-travels__item">
+          <a class="next-travels__link" href="#">Палермо</a>
+        </li>
+        <li class="next-travels__item">
+          <a class="next-travels__link" href="#">Ницца</a>
+        </li>
+        <li class="next-travels__item">
+          <a class="next-travels__link" href="#">Монпелье</a>
+        </li>
+        <li class="next-travels__item">
+          <a class="next-travels__link" href="#">Катания</a>
+        </li>
+        <li class="next-travels__item">
+          <a class="next-travels__link" href="#">Монако</a>
+        </li>
+        <li class="next-travels__item">
+          <a class="next-travels__link" href="#">Барселона</a>
+        </li>
+        <li class="next-travels__item">
+          <a class="next-travels__link" href="#">Неаполь</a>
+        </li>
+        <li class="next-travels__item">
+          <a class="next-travels__link" href="#">Динь-ле-Бен</a>
+        </li>
+        <li class="next-travels__item">
+          <a class="next-travels__link" href="#">Пальма</a>
+        </li>
+        <li class="next-travels__item">
+          <a class="next-travels__link" href="#">Рим</a>
+        <li>
+        <li class="next-travels__item">
+          <a class="next-travels__link" href="#">Гренобль</a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__contacts">
+      <h4 class="page-footer__contacts-title">Наши контакты</h4>
+      <a class="page-footer__contacts-link" href="tel:+749978468446">
+        <svg class="page-footer__contacts-icon" width="26" height="20">
+          <use xlink:href="#icon-mail"></use>
+        </svg>
+        puteshestviemechta@gmail.ru
+      </a>
+      <a class="page-footer__contacts-link page-footer__contacts-link--tel" href="tel:+749978468446">
+        <svg class="page-footer__contacts-icon page-footer__contacts-icon--tel" width="30" height="30">
+          <use xlink:href="#icon-tel"></use>
+        </svg>
+        +7 (499) -784-684-46
+      </a>
+    </div>
+
+    <div class="page-footer__corporate">
+      <h4 class="page-footer__corporate-title">Корпоративные путешествия</h4>
+      <p class="page-footer__corporate-description">
+        Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают
+        компанию, помогают
+        поддерживать корпоративный дух, а также являются оличным времяпрепровождением
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/picturefill.js"></script>
+  <script src="js/svg4everybody.js"></script>
 </body>
 
 </html>

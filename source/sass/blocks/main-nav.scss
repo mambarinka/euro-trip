@@ -58,7 +58,6 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    // outline: 2px solid purple;
 
     .main-nav--opened &::before {
       position: absolute;
@@ -68,7 +67,6 @@
       height: 22px;
       top: 15px;
       right: 25px;
-      // outline: 2px solid lightgreen;
 
       background: url("../../img/icon-button-close.svg") no-repeat center;
     }
@@ -114,7 +112,6 @@
       height: 22px;
       top: 15px;
       right: 15px;
-      // outline: 2px solid lightgreen;
 
       background: url("../../img/icon-button-close.svg") no-repeat center;
     }
@@ -148,14 +145,12 @@
     justify-content: flex-end;
     align-items: center;
     width: 67%;
-    // outline: 2px solid firebrick;
   }
 
   @include tablet {
     @include list-reset;
 
     width: 100%;
-    // outline: 2px solid firebrick;
   }
 
   @include mobile {
@@ -167,7 +162,6 @@
 
 .main-nav__item {
   @include desktop {
-    // outline: 2px solid red;
     margin-left: 5%;
 
     text-align: right;
@@ -263,7 +257,6 @@
     padding-right: 8px;
 
     @include text-options(18px, 32px, 400, $text-darkgrey-color);
-    // outline: 2px solid green;
 
     &[href]:hover,
     &[href]:focus {
