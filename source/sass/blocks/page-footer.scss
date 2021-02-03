@@ -4,6 +4,12 @@
   display: flex;
   justify-content: space-between;
   padding: 16px 13px;
+
+  @include tablet {
+    justify-content: start;
+    flex-wrap: wrap;
+    padding: 82px 21px;
+  }
 }
 
 .page-footer__travels {
@@ -13,6 +19,10 @@
   &:last-child {
     border: none;
   }
+
+  @include tablet {
+    width: 52%;
+  }
 }
 
 .page-footer__contacts {
@@ -21,6 +31,10 @@
   align-items: flex-start;
   width: 30%;
   padding-left: 57px;
+
+  @include tablet {
+    width: 48%;
+  }
 }
 
 .page-footer__contacts-title {
@@ -55,6 +69,10 @@
 .page-footer__corporate {
   width: 30.3%;
   padding-left: 27px;
+
+  @include tablet {
+    width: 100%;
+  }
 }
 
 .page-footer__corporate-title {
