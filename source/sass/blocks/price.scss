@@ -7,6 +7,13 @@
     flex-direction: column;
     align-items: center;
     padding-top: 36px;
+    padding-bottom: 126px;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 39px;
   }
 }
 
@@ -22,6 +29,16 @@
     width: auto;
     margin-bottom: 28px;
     padding-top: 0;
+    order: 0;
+
+    text-align: center;
+  }
+
+  @include mobile {
+    align-items: center;
+    width: auto;
+    margin-bottom: 40px;
+    padding-top: 108px;
     order: 0;
 
     text-align: center;
@@ -47,6 +64,15 @@
 
   @include tablet {
     margin-bottom: 0;
+    padding-bottom: 20px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @include mobile {
+    margin-bottom: 0;
 
     &::after {
       display: none;
@@ -69,6 +95,11 @@
     width: 91%;
     margin-bottom: 30px;
   }
+
+  @include mobile {
+    margin-bottom: 17px;
+    line-height: 27px;
+  }
 }
 
 .price__info {
@@ -78,6 +109,14 @@
   padding-left: 48px;
 
   @include tablet {
+    margin-bottom: 10px;
+    padding-left: 0;
+
+    font-size: 18px;
+    line-height: 34px;
+  }
+
+  @include mobile {
     margin-bottom: 10px;
     padding-left: 0;
 
@@ -104,6 +143,10 @@
   }
 
   @include mobile {
+    width: auto;
+    font-size: 18px;
+    line-height: 32px;
+    color: $main-color;
     text-decoration: underline;
   }
 }
@@ -135,6 +178,11 @@
     width: 82%;
     margin-right: 0;
   }
+
+  @include mobile {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .price__tariff-item {
@@ -154,7 +202,28 @@
   }
 
   @include tablet {
+    align-items: center;
     width: 46.1%;
+    min-height: 629px;
+    padding: 30px 9px 0 9px;
+
+    &:hover {
+      border: 3px solid $main-color;
+      padding: 29px 7px 0 7px;
+    }
+  }
+
+  @include mobile {
+    align-items: center;
+    width: 100%;
+    min-height: 614px;
+    margin-bottom: 31px;
+    padding: 30px 9px 0 9px;
+
+    &:hover {
+      border: 3px solid $main-color;
+      padding: 28px 7px 0 7px;
+    }
   }
 }
 
@@ -174,10 +243,24 @@
   }
 
   @include tablet {
+    margin-bottom: 7px;
     font-size: 24px;
     line-height: 38px;
 
     .price__tariff-item:hover & {
+      margin-bottom: 10px;
+      font-size: 24px;
+      line-height: 34px;
+    }
+  }
+
+  @include mobile {
+    margin-bottom: 5px;
+    font-size: 24px;
+    line-height: 38px;
+
+    .price__tariff-item:hover & {
+      margin-bottom: 9px;
       font-size: 24px;
       line-height: 34px;
     }
@@ -202,6 +285,16 @@
       top: 39px;
       right: 27px;
     }
+  }
+
+  @include tablet {
+    position: relative;
+    margin-bottom: 12px;
+  }
+
+  @include mobile {
+    position: relative;
+    margin-bottom: 12px;
   }
 }
 
@@ -232,6 +325,20 @@
       background-color: $main-color;
       opacity: 1;
     }
+  }
+
+  @include tablet {
+    margin-bottom: 20px;
+    padding-bottom: 9px;
+
+    text-align: center;
+  }
+
+  @include mobile {
+    margin-bottom: 22px;
+    padding-bottom: 9px;
+
+    text-align: center;
   }
 }
 
@@ -269,6 +376,62 @@
   .price__tariff-item:last-child & {
     margin-bottom: 15px;
   }
+
+  @include tablet {
+    margin-bottom: 8px;
+    padding-right: 8px;
+    padding-left: 41px;
+
+    &:last-child {
+      margin-bottom: 19px;
+    }
+
+    .price__tariff-item:last-child & {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 19px;
+      }
+    }
+
+    &::before {
+      left: 10px;
+      top: 1px;
+
+      .price__tariff-item:hover & {
+        left: 6px;
+        top: 5px;
+      }
+    }
+  }
+
+  @include mobile {
+    margin-bottom: 8px;
+    padding-right: 8px;
+    padding-left: 41px;
+
+    &:last-child {
+      margin-bottom: 19px;
+    }
+
+    .price__tariff-item:last-child & {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 28px;
+      }
+    }
+
+    &::before {
+      left: 10px;
+      top: 1px;
+
+      .price__tariff-item:hover & {
+        left: 6px;
+        top: 5px;
+      }
+    }
+  }
 }
 
 .price__tariff-link {
@@ -276,4 +439,24 @@
   margin-top: auto;
   padding-top: 29px;
   padding-bottom: 29px;
+
+  @include tablet {
+    width: 288px;
+    padding-top: 20px;
+    padding-bottom: 16px;
+
+    .price__tariff-item:hover & {
+      padding-bottom: 14px;
+    }
+  }
+
+  @include mobile {
+    width: 288px;
+    padding-top: 20px;
+    padding-bottom: 16px;
+
+    .price__tariff-item:hover & {
+      padding-bottom: 14px;
+    }
+  }
 }
