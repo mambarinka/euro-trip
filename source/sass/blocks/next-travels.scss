@@ -1,0 +1,25 @@
+.next-travels__list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.next-travels__item {
+  width: 33.33%;
+  margin-bottom: 9px;
+}
+
+.next-travels__title {
+  @include text-options(18px, 32px, 600, $text-darkgrey-color);
+
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.next-travels__link {
+  @include text-options(14px, 17px, 400, $text-grey-color);
+
+  opacity: 0.5;
+  text-decoration: none;
+}
