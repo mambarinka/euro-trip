@@ -21,7 +21,7 @@
   }
 
   @include tablet {
-    padding-bottom: 100px;
+    padding-bottom: 72px;
     overflow: hidden;
 
     &::after {
@@ -30,6 +30,7 @@
   }
 
   @include mobile {
+    padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
 
