@@ -10,6 +10,11 @@
     flex-wrap: wrap;
     padding: 82px 21px;
   }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .page-footer__travels {
@@ -21,7 +26,19 @@
   }
 
   @include tablet {
-    width: 52%;
+    width: 54.5%;
+    margin-bottom: 19px;
+  }
+
+  @include mobile {
+    width: 100%;
+    padding-top: 55px;
+    padding-bottom: 9px;
+
+    border-right: none;
+    border-bottom: 1px solid #d7d9df;
+
+    text-align: center;
   }
 }
 
@@ -33,7 +50,18 @@
   padding-left: 57px;
 
   @include tablet {
-    width: 48%;
+    width: 45.5%;
+    padding-left: 49px;
+  }
+
+  @include mobile {
+    align-items: center;
+    width: 100%;
+    padding-top: 29px;
+    padding-left: 0;
+    padding-right: 11px;
+
+    border-bottom: 1px solid #d7d9df;
   }
 }
 
@@ -48,21 +76,55 @@
   @include text-options(14px, 17px, 400, $main-color);
 
   display: flex;
-  width: 90%;
+  width: 100%;
   margin-bottom: 14px;
 
   &--tel {
     font-size: 16px;
     line-height: 32px;
   }
+
+  @include mobile {
+    justify-content: center;
+    margin-bottom: 15px;
+  }
 }
 
 .page-footer__contacts-icon {
   margin-right: 12px;
 
+  &--mail {
+    width: 26px;
+    height: 20px;
+  }
+
   &--tel {
+    width: 30px;
+    height: 30px;
     fill: none;
     stroke: #d7d9df;
+  }
+}
+
+.page-footer__contacts-mail {
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.page-footer__contacts-text {
+  display: none;
+
+  @include tablet {
+    display: inline-block;
+  }
+
+  @include mobile {
+    display: inline-block;
   }
 }
 
@@ -72,6 +134,20 @@
 
   @include tablet {
     width: 100%;
+    padding-top: 29px;
+    padding-left: 0;
+
+    border-top: 1px solid #d7d9df;
+
+    text-align: center;
+  }
+
+  @include mobile {
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 0;
+
+    text-align: center;
   }
 }
 

@@ -1,13 +1,66 @@
+// .next-travels {
+//   @include mobile {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//   }
+// }
+
 .next-travels__list {
   @include list-reset;
 
   display: flex;
   flex-wrap: wrap;
+
+  @include mobile {
+    justify-content: space-between;
+  }
 }
 
 .next-travels__item {
   width: 33.33%;
   margin-bottom: 9px;
+
+  @include tablet {
+    width: 31.7%;
+  }
+
+  @include mobile {
+    width: 50%;
+
+    &:nth-child(1),
+    &:nth-child(4),
+    &:nth-child(7),
+    &:nth-child(10),
+    &:nth-child(13) {
+      width: 43%;
+    }
+
+    &:nth-child(3n) {
+      width: 97%;
+    }
+
+    &:nth-child(3) {
+      order: 1;
+      margin-top: 11px;
+    }
+
+    &:nth-child(6) {
+      order: 2;
+    }
+
+    &:nth-child(9) {
+      order: 3;
+    }
+
+    &:nth-child(12) {
+      order: 4;
+    }
+
+    &:nth-child(15) {
+      order: 5;
+    }
+  }
 }
 
 .next-travels__title {
@@ -15,6 +68,10 @@
 
   margin: 0;
   margin-bottom: 20px;
+
+  @include mobile {
+    padding-right: 11px;
+  }
 }
 
 .next-travels__link {
